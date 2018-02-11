@@ -1,0 +1,11 @@
+version: "2"
+services:
+    master:
+        build: ./jenkins-master
+        volumes:
+        - master_home:/var/jenkins_home
+        ports:
+        - "8080:8080"
+        - "5000:5000"
+volumes:
+    master_home:
